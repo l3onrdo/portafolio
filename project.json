@@ -1,0 +1,30 @@
+{
+    "project":[
+        {
+            "Title": "Asynchronous IO in Arduino Scheduler",
+            "description": "This project adds functionality for buffered writing and a preemptive scheduler for Arduino.",
+            "link": "https://github.com/l3onrdo/Asynchronous_IO_in_Arduino_Scheduler",
+            "img": "assets/images/Asynchronous_IO_in_Arduino_Scheduler.jpg"
+        },
+        {
+            "Title": "Mind-Masters",
+            "description": "Mind Masters is a reproduction of the Mastermind game developed using Flask. This project uses Flask-SQLAlchemy, Flask-Bcrypt, and Flask-Login for database management, password encryption, and user authentication.",
+            "link": "1.0.0",
+            "img": "assets/images/mind_master_logo.jpeg"
+        },
+        {
+            "Title": "my-drive",
+            "description": "Ruby-on-Rails app that uses asynchronous data handling to interface with Google Drive API.",
+            "link": "https://github.com/mon-drive/my-drive",
+            "img": "assets/images/mydrive_logo.jpg"
+        },
+        {
+            "Title": "Modelli-I.A",
+            "description": "Implementation of various machine learning models which are: linear regression, gradient descent, neural network, KNN, decision trees and others",
+            "link": "https://github.com/l3onrdo/Modelli-I.A",
+            "img": "assets/images/modelli_AI_logo.jpg"
+        }
+    
+
+    ] 
+}
