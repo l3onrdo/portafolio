@@ -1268,7 +1268,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
 
-
+.resume-text{padding-bottom: 40px;}
 
 
 /*-----------------------------------*\
@@ -1329,7 +1329,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
 
-
+  .resume-text{padding-bottom: 0px;}
   /**
    * #REUSED STYLE
    */
