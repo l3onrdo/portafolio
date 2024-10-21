@@ -2,25 +2,29 @@
     "project":[
         {
             "Title": "Asynchronous IO in Arduino Scheduler",
-            "description": "This project adds functionality for buffered writing and a preemptive scheduler for Arduino.",
+            "description_it": "Questo progetto aggiunge funzionalità per la scrittura bufferizzata e un scheduler preemptive per Arduino.",
+            "description_en": "This project adds functionality for buffered writing and a preemptive scheduler for Arduino.",
             "link": "https://github.com/l3onrdo/Asynchronous_IO_in_Arduino_Scheduler",
             "img": "assets/images/Asynchronous_IO_in_Arduino_Scheduler.jpg"
         },
         {
             "Title": "Mind-Masters",
-            "description": "Mind Masters is a reproduction of the Mastermind game developed using Flask. This project uses Flask-SQLAlchemy, Flask-Bcrypt, and Flask-Login for database management, password encryption, and user authentication.",
+            "description_it": "Mind Masters è una riproduzione del gioco Mastermind sviluppato utilizzando Flask. Questo progetto utilizza Flask-SQLAlchemy, Flask-Bcrypt e Flask-Login per la gestione del database, la crittografia delle password e l'autenticazione dell'utente.",
+            "description_en": "Mind Masters is a reproduction of the Mastermind game developed using Flask. This project uses Flask-SQLAlchemy, Flask-Bcrypt, and Flask-Login for database management, password encryption, and user authentication.",
             "link": "1.0.0",
             "img": "assets/images/mind_master_logo.jpeg"
         },
         {
             "Title": "my-drive",
-            "description": "Ruby-on-Rails app that uses asynchronous data handling to interface with Google Drive API.",
+            "description_it": "App Ruby-on-Rails che utilizza la gestione asincrona dei dati per interfacciarsi con l'API di Google Drive.",
+            "description_en": "Ruby-on-Rails app that uses asynchronous data handling to interface with Google Drive API.",
             "link": "https://github.com/mon-drive/my-drive",
             "img": "assets/images/mydrive_logo.jpg"
         },
         {
             "Title": "Modelli-I.A",
-            "description": "Implementation of various machine learning models which are: linear regression, gradient descent, neural network, KNN, decision trees and others",
+            "description_it": "Implementazione di vari modelli di machine learning che sono: regressione lineare, discesa del gradiente, rete neurale, KNN, alberi decisionali e altri",
+            "description_en": "Implementation of various machine learning models which are: linear regression, gradient descent, neural network, KNN, decision trees and others",
             "link": "https://github.com/l3onrdo/Modelli-I.A",
             "img": "assets/images/modelli_AI_logo.jpg"
         }

@@ -31,6 +31,25 @@
 
 
 
+  function translate(lng, tagAttr){
+    var translate = new Translate();
+    translate.init(tagAttr, lng);
+    translate.process();
+  }
+
+  $(document).ready(function(){
+    //This is id of HTML element (English) with attribute lng-tag
+    $("#english").click(function(){
+      translate('en', 'lng-tag');
+    });
+    //This is id of HTML element (Khmer) with attribute lng-tag
+    $("#italian").click(function(){
+      translate('it', 'lng-tag');
+    });
+  });
+
+
+
 /**fine  */
 
 // element toggle function
@@ -169,14 +188,16 @@ for (let i = 0; i < formInputs.length; i++) {
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
+
 const pages = document.querySelectorAll("[data-page]");
 
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
+
   navigationLinks[i].addEventListener("click", function () {
 
     for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+      if (this.getAttribute("data-nav-link").toLowerCase() === pages[i].dataset.page) {
         pages[i].classList.add("active");
         navigationLinks[i].classList.add("active");
         window.scrollTo(0, 0);
