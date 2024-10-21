@@ -1,0 +1,40 @@
+{
+    "IMPORTANTE": "Mettere in alto le informazioni più recenti per ripettare l'ordine cronologico",
+    "IMPORTANT": "Put the most recent information at the top to respect the chronological order",
+    
+    "education": [
+        {
+        "school_it": "Università di Roma 'La Sapienza'",
+        "school_en": "Sapienza University of Rome",
+        "time_it": "2021 — Presente",
+        "time_en": "2021 — Present",
+        "description_it": "Iscritto al corso di Ingegneria Informatica e Automatica.",
+        "description_en": "Enrolled in the Computer and Automatic Engineering course."
+        },
+        {
+        "school_it": "Istituto Tecnico Tecnologico 'Leonardo da Vinci'",
+        "school_en": "'Leonardo da Vinci' Technological Institute",
+        "time": "2016 — 2021",
+        "description_it": "Diplomato presso l'Istituto Tecnico Tecnologico ‘Leonardo da Vinci’ di Viterbo nel settore dell'informatica e delle telecomunicazioni.",
+        "description_en": "graduated from the Istituto Tecnico Tecnologico ‘Leonardo da Vinci’ in Viterbo in the field of information technology and telecommunications."
+        }
+    ],
+    "experience": [
+        {
+        "title_it": "Progetti universitari",
+        "title_en": "University projects",
+        "time_it": "2023 - 2024",
+        "time_en": "2023 - 2024",
+        "description_it": "Ho realizzato vari progetti universitari per gli esami del terzo anno, trattando argomenti che spaziano dall'implementazione di algoritmi di machine learning alla programmazione web e alla programmazione in C per Arduino.",
+        "description_en": "I have completed various university projects for my third-year exams, covering topics ranging from the implementation of machine learning algorithms to web programming and C programming for Arduino."
+        },
+        {
+        "title_it": "Monsters of Roza",
+        "title_en": "Monsters of Roza",
+        "time_it": "2018 — Interrotto",
+        "time_en": "2018 —  Interrupted",
+        "description_it": "Realizzato tra il terzo e il quarto anno di superiori, questo progetto prevedeva la creazione di un'avventura grafica ambientata a Viterbo, ispirata a storie e credenze popolari locali. Il progetto è stato interrotto a causa della mancanza di tempo e degli impegni scolastici.",
+        "description_en": "Developed between the third and fourth year of high school, this project involved the creation of a graphic adventure set in Viterbo, inspired by local stories and beliefs. The project was interrupted due to lack of time and school commitments."
+        }
+    ]
+}

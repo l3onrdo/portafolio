@@ -20,6 +20,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./assets/js/translate.js"></script>
   <script src="./assets/js/projects.js"></script>
+  <script src="./assets/js/resume.js"></script>
   <link rel="stylesheet" href="./assets/css/style.css">
 
 
@@ -58,7 +59,7 @@
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
+          <span lng-tag="s_contacts">Mostra Contatti</span>
 
           <ion-icon name="chevron-down"></ion-icon>
         </button>
@@ -106,9 +107,9 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Birthday</p>
+              <p class="contact-title" lng-tag="Birthday">Compleanno</p>
 
-              <time datetime="2002-12-26">16 December, 2002</time>
+              <time datetime="2002-12-26" lng-tag="date">16 Dicembre, 2002</time>
             </div>
 
           </li>
@@ -120,7 +121,7 @@
             </div>
 
             <div class="contact-info">
-              <p class="contact-title">Location</p>
+              <p class="contact-title" lng-tag="city">Città</p>
 
               <address>Viterbo , Italy</address>
             </div>
@@ -177,10 +178,10 @@
       <button class="navbar-link active" lng-tag="about" data-nav-link="About">Chi sono</button>
     </li>
     <li class="navbar-item">
-      <button class="navbar-link" data-nav-link="Resume">Resume</button>
+      <button class="navbar-link" lng-tag="resume" data-nav-link="Resume">Curriculum</button>
     </li>
     <li class="navbar-item">
-      <button class="navbar-link" data-nav-link="Portfolio">Portfolio</button>
+      <button class="navbar-link" lng-tag="portfolio" data-nav-link="Portfolio">Portfolio</button>
     </li>
 
     <!-- Language Selector Dropdown -->
@@ -243,12 +244,8 @@
         </header>
 
         <section class="about-text">
-          <p>
-           TEST_EN
-          </p>
-
-          <p>
-           TEST_EN_2
+          <p lng-tag="about_text">
+            Mi chiamo Leonardo Miralli e sono uno studente di ingegneria informatica e automatica presso la Sapienza Università di Roma. Sono appassionato di programmazione e amo imparare continuamente nuove tecnologie e metodologie. Mi piace lavorare su progetti che mi permettono di sviluppare soluzioni innovative e creative. Sono sempre alla ricerca di nuove sfide per crescere e migliorare le mie competenze
           </p>
         </section>
 
@@ -265,13 +262,13 @@
       <article class="resume" data-page="resume">
 
         <header>
-          <h2 class="h2 article-title">Resume</h2>
+          <h2 class="h2 article-title" lng-tag="resume">Resume</h2>
         </header>
 
         <section class="about-text">
-          <p>
-           TEST_EN
-          </p>
+          <a href="https://cristiandiiorio.ovh/" class="text-decoration-none text-reset" style="font-size: larger; white-space: nowrap;" lng-tag="resume_text">
+            <b class="text-decoration-underline">Clicca qui</b> per  scaricare il curriculum completo.
+          </a>
         </section>
 
         <section class="timeline">
@@ -284,9 +281,9 @@
             <h3 class="h3">Education</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="timeline-list" id="study-list">
 
-            <li class="timeline-item">
+            <!-- <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Sapienza University of Rome</h4>
 
@@ -310,7 +307,7 @@
                 graduated from the Istituto Tecnico Tecnologico ‘Leonardo da Vinci’ in Viterbo in the field of information technology and telecommunications.
               </p>
 
-            </li>
+            </li> -->
 
           </ol>
 
@@ -326,7 +323,7 @@
             <h3 class="h3">Experience</h3>
           </div>
 
-          <ol class="timeline-list">
+          <ol class="timeline-list" id="work-list">
 
             <!-- <li class="timeline-item">
 
@@ -356,7 +353,7 @@
 
             </li> -->
 
-            <li class="timeline-item">
+            <!-- <li class="timeline-item">
 
               <h4 class="h4 timeline-item-title">Monsters of Roza</h4>
 
@@ -368,7 +365,7 @@
 
             </li>
 
-          </ol>
+          </ol> -->
 
         </section>
 

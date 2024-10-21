@@ -1,4 +1,12 @@
 {
     "about": "About",
-    "about_me": "About Me"
+    "about_me": "About Me",
+    "s_contacts": "Show Contacts",
+    "Birthday": "Birthday",
+    "date": "16 December, 2002",
+    "City": "City",
+    "resume": "Resume",
+    "portfolio": "Portfolio",
+    "about_text": "My name is Leonardo Miralli, and I am a Computer and Automation Engineering student at Sapienza University of Rome. I am passionate about programming and love learning new technologies and methodologies. I enjoy working on projects that allow me to develop innovative and creative solutions. I am always seeking new challenges to grow and improve my skills.",
+    "resume_text": "<b class='text-decoration-underline'>Click here</b> to download the full resume."
 }

@@ -6,6 +6,7 @@ function Translate() {
 		this.attribute = attribute;
 		this.lng = lng;	
 		ProjectTranslate(lng);
+		ResumeTranslate(lng);
 	}
 	//translate 
 	this.process = function(){
