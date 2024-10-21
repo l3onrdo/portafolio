@@ -518,6 +518,7 @@ main {
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  margin-bottom: 0px;
 }
 
 .navbar-link {
@@ -827,7 +828,7 @@ main {
 
 .timeline-list {
   font-size: var(--fs-6);
-  margin-left: 45px;
+  margin-left: 12.5px;
 }
 
 .timeline-item { position: relative; }
@@ -1533,7 +1534,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    * #RESUME
    */
 
-  .timeline-list { margin-left: 65px; }
+  .timeline-list { margin-left: 30px; }
 
   .timeline-item:not(:last-child)::before { left: -40px; }
 
