@@ -6,9 +6,10 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Metodo non consentito' });
   }
 
-
+  console.log('api', process.env.RESEND_API_KEY);
   // Inizializza Resend 
   const resend = new Resend(process.env.RESEND_API_KEY);
+  
 
   // Estrai i dati dal corpo della richiesta
   const { name, email, message } = req.body;
