@@ -6,16 +6,6 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Metodo non consentito' });
   }
 
-  // Verifica la chiave segreta per prevenire chiamate non autorizzate
-  const { SECRET_TOKEN } = process.env;
-  const { token } = req.body;
-
-  if (!token || token !== SECRET_TOKEN) {
-    return res.status(401).json({ error: 'Non autorizzato' });
-  }
-
-  // Rimuovi il token prima di processare i dati
-  delete req.body.token;
 
   // Inizializza Resend 
   const resend = new Resend(process.env.RESEND_API_KEY);
