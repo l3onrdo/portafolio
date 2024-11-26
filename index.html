@@ -529,7 +529,7 @@
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form id="email" class="form" data-form>
+          <form id="contact-form" class="form" data-form>
 
             <div class="input-wrapper">
               <input type="text" id="name" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
@@ -547,10 +547,10 @@
           </form>
           
           <script>
-            const form = document.getElementById('contact-form');
-            form.addEventListener('submit', async (e) => {
+            const form_con = document.getElementById('contact-form');
+            form_con.addEventListener('submit', async (e) => {
               e.preventDefault();
-              const formData = new FormData(form);
+              const formData = new FormData(form_con);
           
               const data = Object.fromEntries(formData.entries());
               const response = await fetch('/api/contact', {
