@@ -550,20 +550,37 @@
             const form_con = document.getElementById('contact-form');
             form_con.addEventListener('submit', async (e) => {
               e.preventDefault();
-              const formData = new FormData(form_con);
-          
-              const data = Object.fromEntries(formData.entries());
-              const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data),
-              });
-          
-              const result = await response.json();
-              if (response.ok) {
-                alert(result.success);
-              } else {
-                alert(result.error);
+              
+              const submitBtn = form_con.querySelector('[data-form-btn]');
+              submitBtn.disabled = true;
+              submitBtn.querySelector('span').textContent = 'Invio in corso...';
+
+              try {
+                const formData = new FormData(form_con);
+                const data = Object.fromEntries(formData.entries());
+                
+                // Aggiungi un token segreto
+                data.token = 'un_token_segreto_lungp_e_casuale'; // DEVE CORRISPONDERE A SECRET_TOKEN
+
+                const response = await fetch('/api/contact', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                  alert(result.success);
+                  form_con.reset();
+                } else {
+                  alert(result.error);
+                }
+              } catch (error) {
+                alert('Errore durante l\'invio del messaggio. Riprova.');
+              } finally {
+                submitBtn.disabled = false;
+                submitBtn.querySelector('span').textContent = 'Send Message';
               }
             });
           </script>
