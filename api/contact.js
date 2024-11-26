@@ -3,7 +3,9 @@ import nodemailer from 'nodemailer';
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
-
+    console.log('name:', name);
+    console.log('email:', email);
+    console.log('message:', message);
     if (!name || !email || !message) {
       return res.status(400).json({ error: 'Tutti i campi sono obbligatori.' });
     }
