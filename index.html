@@ -569,6 +569,7 @@
                 });
 
                 const result = await response.json();
+                console.log('Risultato server:', result);  // Aggiungi questo per vedere cosa viene restituito
 
                 if (response.ok) {
                   alert(result.success);
@@ -576,6 +577,7 @@
                 } else {
                   alert(result.error);
                 }
+
               } catch (error) {
                 alert('Errore durante l\'invio del messaggio. Riprova.');
               } finally {
