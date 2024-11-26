@@ -19,8 +19,9 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Tutti i campi sono obbligatori' });
   }
 
+  console.log('Dati ricevuti:', { name, email, message });
+
   try {
-    // Invia l'email
     const { data, error } = await resend.emails.send({
       from: 'mirallileonardo@gmail.com',
       to: 'leomiralli@gmail.com',
@@ -33,14 +34,15 @@ export default async function handler(req, res) {
         <p>${message}</p>
       `
     });
-
-    // Gestisci la risposta
+  
+    console.log('Risultato dell\'invio dell\'email:', data);
+  
     if (error) {
+      console.error('Errore nell\'invio dell\'email:', error);
       return res.status(500).json({ error: 'Impossibile inviare l\'email' });
     }
-
+  
     return res.status(200).json({ success: 'Messaggio inviato con successo!' });
-
   } catch (error) {
     console.error('Errore nell\'invio dell\'email:', error);
     return res.status(500).json({ error: 'Errore interno del server' });
