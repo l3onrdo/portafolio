@@ -1,15 +1,12 @@
-import { Resend } from 'resend';
+import sendgrid from '@sendgrid/mail';
+
+sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
   // Controlla che sia una richiesta POST
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Metodo non consentito' });
   }
-
-  console.log('api', process.env.RESEND_API_KEY);
-  // Inizializza Resend 
-  const resend = new Resend(process.env.RESEND_API_KEY);
-  
 
   // Estrai i dati dal corpo della richiesta
   const { name, email, message } = req.body;
@@ -19,12 +16,11 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: 'Tutti i campi sono obbligatori' });
   }
 
-  console.log('Dati ricevuti:', { name, email, message });
-
   try {
-    const { data, error } = await resend.emails.send({
-      from: 'leomiralli@gmail.com',
-      to: 'mirallileonardo@gmail.com',
+    // Configura il messaggio da inviare
+    const msg = {
+      to: 'leomiralli@gmail.com', // Inserisci il tuo indirizzo email
+      from: 'mirallileonardo@gmail.com', // Usa un indirizzo verificato su SendGrid
       subject: `Nuovo messaggio da ${name}`,
       html: `
         <h2>Nuovo messaggio dal portfolio</h2>
@@ -32,19 +28,16 @@ export default async function handler(req, res) {
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Messaggio:</strong></p>
         <p>${message}</p>
-      `
-    });
-  
-    console.log('Risultato dell\'invio dell\'email:', data);
-  
-    if (error) {
-      console.error('Errore nell\'invio dell\'email:', error);
-      return res.status(500).json({ error: 'Impossibile inviare l\'email' });
-    }
-  
+      `,
+    };
+
+    // Invia l'email tramite SendGrid
+    await sendgrid.send(msg);
+
     return res.status(200).json({ success: 'Messaggio inviato con successo!' });
   } catch (error) {
     console.error('Errore nell\'invio dell\'email:', error);
     return res.status(500).json({ error: 'Errore interno del server' });
   }
 }
+
