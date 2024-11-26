@@ -11,12 +11,12 @@ export default async function handler(req, res) {
     try {
       // Configura il transporter per Nodemailer
       const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com", // Puoi usare il server SMTP del tuo provider email
+        host: "smtp.gmail.com",
         port: 587,
-        secure: false, // Usa true se stai usando SMTP su porta 465
+        secure: false,
         auth: {
-          user: "la_tua_email@gmail.com", // La tua email
-          pass: "la_tua_password_app", // La password o app-specific password
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
         },
       });
 
