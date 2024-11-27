@@ -25,6 +25,7 @@ function Translate() {
 					for(var i =0; i < allDom.length; i++){
 						var elem = allDom[i];
 						var key = elem.getAttribute(_self.attribute);
+						
 						if(key == "placeholder_name" || key == "placeholder_email" || key == "placeholder_message") {
 							elem.setAttribute("placeholder", LngObject[key]);
 						}else if(key != null) {
