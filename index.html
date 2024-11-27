@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
+  <title>Leonardo Miralli</title>
 
   <!--
     - favicon
@@ -184,7 +184,7 @@
       <button class="navbar-link" lng-tag="portfolio" data-nav-link="Portfolio">Portfolio</button>
     </li>
     <li class="navbar-item">
-      <button class="navbar-link"  data-nav-link="contatto">Contatti</button>
+      <button class="navbar-link"  data-nav-link="contatto" lng-tag="contac_title">Contattami</button>
     </li>
 
     <!-- Language Selector Dropdown -->
@@ -522,26 +522,26 @@
      <article class="contact" data-page="contatto">
 
         <header>
-          <h2 class="h2 article-title">Contact</h2>
+          <h2 id="lng_ceck" class="h2 article-title" lng-tag="contac_title">Contattami</h2>
         </header>
 
         <section class="contact-form">
 
-          <h3 class="h3 form-title">Contact Form</h3>
+          <h3 class="h3 form-title" lng-tag="contact_form">Modulo di Contatto</h3>
 
           <form id="contact-form" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" id="name" name="name" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" id="name" name="name" class="form-input" lgn-tag="placeholder_name" placeholder="Nome e cognome" required data-form-input>
 
-              <input type="email" id="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" id="email" name="email" class="form-input" lgn-tag="placeholder_email" placeholder="Indirizzo Email" required data-form-input>
             </div>
 
-            <textarea id="message" name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea id="message" name="message" class="form-input" lng-tag="placeholder_message" placeholder="Il Tuo Messaggio" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
+              <span lng-tag="send_mess">Send Message</span>
             </button>
 
           </form>
@@ -552,8 +552,13 @@
               e.preventDefault();
 
               const submitBtn = form_con.querySelector('[data-form-btn]');
+              const lngceck=document.getElementById('lng_ceck');
               submitBtn.disabled = true;
-              submitBtn.querySelector('span').textContent = 'Invio in corso...';
+              if(lngceck.innerText=="Contattami"){
+                submitBtn.querySelector('span').textContent = 'Invio in corso...';
+              }else{
+                submitBtn.querySelector('span').textContent = 'Sending...';
+              }
 
               try {
                 const formData = new FormData(form_con);

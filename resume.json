@@ -30,12 +30,12 @@
         "description_en": "I have completed various university projects for my third-year exams, covering topics ranging from the implementation of machine learning algorithms to web programming and C programming for Arduino."
         },
         {
-        "title_it": "Monsters of Roza",
-        "title_en": "Monsters of Roza",
+        "title_it": "Sviluppo di un videogioco in 2D con Unity",
+        "title_en": "Development of a 2D video game with Unity",
         "time_it": "2018 — Interrotto",
         "time_en": "2018 —  Interrupted",
-        "description_it": "Sviluppo di un videogioco in 2D con Unity. Realizzato tra il terzo e il quarto anno di superiori, questo progetto prevedeva la creazione di un'avventura grafica ambientata a Viterbo, ispirata a storie e credenze popolari locali. Il progetto è stato interrotto a causa della mancanza di tempo e degli impegni scolastici.",
-        "description_en": "Development of a 2D video game with Unity. Created between the third and fourth year of high school, this project involved the creation of a graphic adventure set in Viterbo, inspired by local stories and beliefs. The project was interrupted due to lack of time and school commitments."
+        "description_it": "Realizzato tra il terzo e il quarto anno di superiori, questo progetto prevedeva la creazione di un'avventura grafica ambientata a Viterbo, ispirata a storie e credenze popolari locali. Il progetto è stato interrotto a causa della mancanza di tempo e degli impegni scolastici.",
+        "description_en": "Created between the third and fourth year of high school, this project involved the creation of a graphic adventure set in Viterbo, inspired by local stories and beliefs. The project was interrupted due to lack of time and school commitments."
         }
     ]
 }
