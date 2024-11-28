@@ -39,7 +39,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-body">
-          <p lng-tag="email_ok">Email inviata con successo</p>
+          <h4 lng-tag="email_ok" style="color: white; text-align: center;">Email inviata con successo</h4>
         </div>
         <div class="modal-footer">
           <button type="button" class="bott form-btn " data-bs-dismiss="modal">Ok</button>
@@ -593,8 +593,9 @@
                   
                   form_con.reset();
                 }
-                $('#modal_email_ok').modal('show');
+                
               } catch (error) {
+                $('#modal_email_ok').modal('show');
                 console.log(error);
               } finally {
                 submitBtn.disabled = false;
