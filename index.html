@@ -34,6 +34,20 @@
 
 <body>
 
+  <!-- modal for email confirm-->
+  <div class="modal fade" id="modal_email_ok" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p lng-tag="email_ok">Email inviata con successo</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="bott form-btn " data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!--
     - #MAIN
   -->
@@ -541,7 +555,7 @@
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
-              <span lng-tag="send_mess">Send Message</span>
+              <span lng-tag="send_mess">Invia Messaggio</span>
             </button>
 
           </form>
@@ -564,9 +578,6 @@
                 const formData = new FormData(form_con);
                 const data = Object.fromEntries(formData.entries());
 
-                // Aggiungi un token segreto
-                data.token = 'un_token_segreto_lungp_e_casuale'; // DEVE CORRISPONDERE A SECRET_TOKEN
-
                 const response = await fetch('/api/contact', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
@@ -576,16 +587,22 @@
                 const result = await response.json();
 
                 if (response.ok) {
-                  alert(result.success);
+
+                  //TO DO FARE IL MODAL
+                  $('#modal_email_ok').modal('show');
+                  
                   form_con.reset();
-                } else {
-                  alert(result.error);
                 }
+                $('#modal_email_ok').modal('show');
               } catch (error) {
-                alert('Errore durante l\'invio del messaggio. Riprova.');
+                console.log(error);
               } finally {
                 submitBtn.disabled = false;
-                submitBtn.querySelector('span').textContent = 'Send Message';
+                if(lngceck.innerText=="Contattami"){
+                  submitBtn.querySelector('span').textContent = 'Invia Messaggio';
+                }else{
+                  submitBtn.querySelector('span').textContent = 'Send Message';
+                }
               }
             });
           </script>

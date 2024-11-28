@@ -16,5 +16,6 @@
     "placeholder_name": "Nome e cognome",
     "placeholder_email": "Indirizzo Email",
     "placeholder_message": "Il Tuo Messaggio",
-    "send_mess": "Invia Messaggio"
+    "send_mess": "Invia Messaggio",
+    "email_ok": "Il tuo messaggio è stato inviato con successo."
 }
