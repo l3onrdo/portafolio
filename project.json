@@ -1,5 +1,5 @@
 {
-    "project":[
+    "project": [
         {
             "Title": "Asynchronous IO in Arduino Scheduler",
             "description_it": "Questo progetto aggiunge funzionalità per la scrittura bufferizzata e un scheduler preemptive per Arduino.",
@@ -11,7 +11,7 @@
             "Title": "Mind-Masters",
             "description_it": "Mind Masters è una riproduzione del gioco Mastermind sviluppato utilizzando Flask. Questo progetto utilizza Flask-SQLAlchemy, Flask-Bcrypt e Flask-Login per la gestione del database, la crittografia delle password e l'autenticazione dell'utente.",
             "description_en": "Mind Masters is a reproduction of the Mastermind game developed using Flask. This project uses Flask-SQLAlchemy, Flask-Bcrypt, and Flask-Login for database management, password encryption, and user authentication.",
-            "link": "1.0.0",
+            "link": "https://github.com/l3onrdo/Mind-Masters",
             "img": "assets/images/mind_master_logo.jpeg"
         },
         {
@@ -23,12 +23,10 @@
         },
         {
             "Title": "Modelli-I.A",
-            "description_it": "Implementazione di vari modelli di machine learning che sono: regressione lineare, discesa del gradiente, rete neurale, KNN, alberi decisionali e altri",
-            "description_en": "Implementation of various machine learning models which are: linear regression, gradient descent, neural network, KNN, decision trees and others",
+            "description_it": "Implementazione di vari modelli di machine learning, tra cui regressione lineare, discesa del gradiente, reti neurali, KNN, alberi decisionali e altri.",
+            "description_en": "Implementation of various machine learning models, including linear regression, gradient descent, neural networks, KNN, decision trees, and others.",
             "link": "https://github.com/l3onrdo/Modelli-I.A",
             "img": "assets/images/modelli_AI_logo.jpg"
         }
-    
-
-    ] 
+    ]
 }

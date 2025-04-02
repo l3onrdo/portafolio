@@ -13,8 +13,8 @@
     "resume_text": "<b class='text-decoration-underline'>Click here</b> to download the full resume.",
     "contac_title": "Contact Me",
     "contact_form":"Contact Form",
-    "placeholder_name": "Full name",
-    "placeholder_email": "Email address",
+    "placeholder_name": "Full Name",
+    "placeholder_email": "Email Address",
     "placeholder_message": "Your Message",
     "send_mess": "Send Message",
     "email_ok": "Your message has been sent successfully."
